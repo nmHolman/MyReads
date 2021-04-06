@@ -1,5 +1,5 @@
 import React from 'react'
-// import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from './BooksAPI'
 import './App.css'
 import BookSearch from './BookSearch'
 import BookShelf from './BookShelf'
@@ -25,7 +25,7 @@ class BooksApp extends React.Component {
         )} />
 
         <Route path='/add' render={() => (
-            <BookSearch />
+            <BookSearch BooksAPI={BooksAPI} />
         )} />
 
       </div>
