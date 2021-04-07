@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from './SearchBar'
-import SearchResults from './SearchResults'
+import BookList from './BookList'
 
 class BookSearch extends Component {
     state = {
@@ -40,7 +40,9 @@ class BookSearch extends Component {
         return(
             <div className="search-books">
                 <SearchBar handleQuery={this.handleQuery} />
-                <SearchResults  results={this.state.results}/>
+                <div className="search-books-results">
+                    <BookList books={this.state.results} BooksAPI={this.props.BooksAPI}/>
+                </div>                
             </div>
         )
     }
