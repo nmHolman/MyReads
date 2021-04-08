@@ -18,19 +18,19 @@ class BookShelf extends Component{
                     <div className="bookshelf">
                         <h2 className="bookshelf-title">Currently Reading</h2>
                         <div className="bookshelf-books">
-                            <BookList books={currentReads} />
+                            <BookList books={currentReads} BooksAPI={this.props.BooksAPI} changeShelf={this.props.changeShelf} />
                         </div>
                     </div>
                     <div className="bookshelf">
                         <h2 className="bookshelf-title">Want to Read</h2>
                         <div className="bookshelf-books">
-                            <BookList books={readWants} />
+                            <BookList books={readWants} BooksAPI={this.props.BooksAPI} changeShelf={this.props.changeShelf} />
                         </div>
                     </div>
                     <div className="bookshelf">
                         <h2 className="bookshelf-title">Read</h2>
                         <div className="bookshelf-books">
-                            <BookList books={read} />
+                            <BookList books={read} BooksAPI={this.props.BooksAPI} changeShelf={this.props.changeShelf} />
                         </div>
                     </div>
                 </div>
