@@ -37,7 +37,7 @@ class BooksApp extends React.Component {
             <BookShelf books={this.state.books} BooksAPI={BooksAPI} currentBooks={this.state.books} changeShelf={this.changeShelf}/>
         )} />
 
-        <Route path='/add' render={() => (
+        <Route path='/search' render={() => (
             <BookSearch BooksAPI={BooksAPI} currentBooks={this.state.books} changeShelf={this.changeShelf} />
         )} />
 
