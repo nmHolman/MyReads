@@ -38,7 +38,7 @@ class BooksApp extends React.Component {
         )} />
 
         <Route path='/add' render={() => (
-            <BookSearch BooksAPI={BooksAPI} changeShelf={this.changeShelf} />
+            <BookSearch BooksAPI={BooksAPI} currentBooks={this.state.books} changeShelf={this.changeShelf} />
         )} />
 
       </div>

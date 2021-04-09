@@ -41,7 +41,7 @@ class BookSearch extends Component {
             <div className="search-books">
                 <SearchBar handleQuery={this.handleQuery} />
                 <div className="search-books-results">
-                    <BookList books={this.state.results} changeShelf={this.props.changeShelf} />
+                    <BookList books={this.state.results} currentBooks={this.props.currentBooks} changeShelf={this.props.changeShelf} />
                 </div>                
             </div>
         )
