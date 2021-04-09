@@ -14,8 +14,8 @@ class BookSearch extends Component {
         }))      
     }
 
-    runQuery = () => {
-        this.props.BooksAPI.search(this.state.query)
+    runQuery = (query) => {
+        this.props.BooksAPI.search(query)
             .then((res) => {
                 const results = res;
                 if (res !== undefined  && res.length > 0) {

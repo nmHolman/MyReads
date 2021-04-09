@@ -13,7 +13,7 @@ class BookList extends Component {
                                 <ShelfSelector book={book} currentBooks={this.props.currentBooks} changeShelf={this.props.changeShelf} />
                             </div>
                             <div className="book-title">{book.title}</div>
-                            {book.authors.map((author) => (
+                            {book.authors && book.authors.map((author) => (
                                 <div key={book.id+author} className="book-authors">{author}</div>
                             ))}                                
                         </div>
