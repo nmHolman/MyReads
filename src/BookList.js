@@ -9,7 +9,11 @@ class BookList extends Component {
                     <li key={book.id}>
                         <div className="book">
                             <div className="book-top">
-                                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
+                                {book.imageLinks
+                                    ? <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
+                                    : <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(https://via.placeholder.com/128x193.png?text=No+Cover+Image)`}}></div>
+                                }
+                                
                                 <ShelfSelector book={book} currentBooks={this.props.currentBooks} changeShelf={this.props.changeShelf} />
                             </div>
                             <div className="book-title">{book.title}</div>
